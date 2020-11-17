@@ -17,11 +17,11 @@ cd out
 
 # setup clang and build
 [ "x$OS" == "xWindows_NT" ] && cp -a $ROOT/libclang.dll $PWD/libclang.dll || true
-node $ROOT/../native-doc-tooling/index.js $ROOT/../native-decls/
+# node $ROOT/../native-doc-tooling/index.js $ROOT/../native-decls/
 
 mkdir -p $ROOT/../natives/inp/ || true
 
-NODE_PATH=$ROOT/../native-doc-tooling/node_modules/ node $ROOT/../native-doc-tooling/build-template.js lua CFX > $ROOT/../natives/inp/natives_cfx_new.lua
+# NODE_PATH=$ROOT/../native-doc-tooling/node_modules/ node $ROOT/../native-doc-tooling/build-template.js lua CFX > $ROOT/../natives/inp/natives_cfx_new.lua
 rm $PWD/libclang.dll || true
 
 # copy outputs
